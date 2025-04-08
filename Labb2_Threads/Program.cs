@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            ;
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Race race = new([
+                new Car("Volvo"),
+                new Car("Saab"),
+                ], 5000);
+            race.StartRace();
         }
     }
 }
