@@ -6,9 +6,11 @@
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Race race = new([
-                new Car("Volvo"),
-                new Car("Saab"),
-                ], 1000);
+                new Car("Pick up  🛻"),
+                new Car("Brandbil 🚒"),
+                new Car("Polisbil 🚓"),
+                new Car("Buss     🚌"),
+                ], 5000);
             race.StartRace();
         }
     }
