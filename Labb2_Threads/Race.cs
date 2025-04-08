@@ -58,6 +58,7 @@ namespace Labb2_Threads
                             problem.DynamicInvoke(car);
                         }
                     }
+                    Console.WriteLine($"{car.Name} Gick i mål");
                 });
                 car.Thread.Start();
             }
