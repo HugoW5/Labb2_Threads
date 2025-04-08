@@ -8,7 +8,7 @@
             Race race = new([
                 new Car("Volvo"),
                 new Car("Saab"),
-                ], 5000);
+                ], 1000);
             race.StartRace();
         }
     }

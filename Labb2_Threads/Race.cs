@@ -34,13 +34,14 @@ namespace Labb2_Threads
             (Car car) => {
                 if (Rng.Next(0, 5) == 0)
                 {
-                    Console.WriteLine($"👨‍🔧 {car.Name}  Motor fel, Hastigheten på bilen sänks med 1 km/h");
+                    Console.WriteLine($"👨‍🔧 {car.Name} Fick motor fel, Hastigheten på bilen sänks med 1 km/h");
                     car.Speed -= 1;
                 }
             }
         ];
+        private List<Car> FinishedCars = new List<Car>();
         public List<Car> Cars { get; set; } = new List<Car>();
-        public int Length { get; set; } = 5000;
+        public int Length { get; set; } 
 
         public void StartRace()
         {
@@ -58,7 +59,15 @@ namespace Labb2_Threads
                             problem.DynamicInvoke(car);
                         }
                     }
-                    Console.WriteLine($"{car.Name} Gick i mål");
+                    if (FinishedCars.Count == 0)
+                    {
+                        Console.WriteLine($"{car.Name} Vann");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{car.Name} Kommer på {FinishedCars.Count + 1} plats");
+                    }
+                    FinishedCars.Add(car);
                 });
                 car.Thread.Start();
             }

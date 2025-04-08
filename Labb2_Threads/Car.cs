@@ -16,5 +16,10 @@ namespace Labb2_Threads
         {
             Name = initialName;
         }
+        public Car(string initialName, int initialSpeed)
+        {
+            Name = initialName;
+            Speed = initialSpeed;
+        }
     }
 }
