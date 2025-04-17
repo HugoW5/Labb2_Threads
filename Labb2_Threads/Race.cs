@@ -94,11 +94,6 @@ namespace Labb2_Threads
             RaceInformaiton();
 
         }
-        /// <summary>
-        /// Race Constructor
-        /// </summary>
-        /// <param name="raceCars">Race cars</param>
-        /// <param name="length">Race length</param>
         public Race(List<Car> raceCars, int length)
         {
             Length = length;
